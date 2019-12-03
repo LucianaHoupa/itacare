@@ -2,14 +2,13 @@
     background-color: #ccc;
     height: 500px;
     display: flex;
-    /* flex-direction: row;*/
-    flex-wrap: wrap;
-    /* flex-flow: row nowrap; */
-    /*forma resumida de ambos acima*/
+/*    flex-direction: row; esticam os itens em colunas verticais. O column coloca os itens em coluna com os itens expandidos em horizontal*/
+    flex-wrap: wrap; /* quebra de linha. Se eu tivesse colocado meu width de 50%, com o wrap ele ia ocupar somente metade da tela*/
+/*     flex-flow: row nowrap; ocupar colunas verticais sem quebra de linha */
+    /*forma resumida de escrever ambos acima (na respectiva ordem: flex-direction e flex-wrap) */
     justify-content: center;
-    align-items: stretch;
-    align-content: stretch;
-    /*verticalmente*/
+    align-items: stretch; /* stretch: define que os itens cresçam igualmente na vertical. ou posicione os itens no flex-start/end ou no center com o tamanho que defini para eles */
+    align-content: stretch; /* alinhamento vertical (quando os itens tiverem wrap ele vai quebrando de acordo com o tamanho de tela). Se eu não definir o height ele ocupa o tamanho todo do meu container. Ou dependendo dos valores que coloco posso agrupá-los ao topo com flex-start, mantendo o wrap*/
 }
 
 .item {
@@ -18,6 +17,7 @@
     padding: 20px;
     margin: 5px;
     width: 200px;
+/*    height: 50px;*/
 }
 
 /* .article-01 {

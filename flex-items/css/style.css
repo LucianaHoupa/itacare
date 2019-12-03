@@ -2,10 +2,10 @@
     background-color: #ccc;
     height: 500px;
     display: flex;
-    /* flex-direction: row; */
+     flex-direction: row; 
     flex-wrap: nowrap;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: stretch;/* alinhamento vertical de todo o container  se não tiver tamanho definido */
     align-content: flex-start;
 }
 
@@ -14,33 +14,32 @@
     color: #fff;
     padding: 20px;
     margin: 5px;
-    /* width: 30px;*/
+     width: 30px;
     height: 30px;
     flex-grow: 1;
     /* -> 1; isso faz com que todos tenham a mesma largura; o 0; só com que o primeiro, e os demais fiquem menores */
-    /*flex-shrink: 1;
-    flex-basis: 30px;
-    /* defino a largura de todos article exceto o 01 que ocupa f.g:03*/
+    /*flex-shrink: 1;/* está relacionado com a capacidade de redução do item */
+    flex-basis: 300px;
+    /* defino a largura de todos article exceto o 01 que ocupa flex-grow:03*/
     /* Forma resumida de declarar os elementos acima (grow, shrink e basis): */
-    /* flex: 0 1 100px; */
+/*     flex: 0 1 100px; ordem: flex-grow, flex-shrink e flex-basis respectivamente */
 }
 
 .article-01 {
-    /* order: 3; */
-    flex-grow: 3;
-    /* isso vai dizer que ele ocupa 3x mais em relação aos outros items e assim, consecutivamente em relação a quantidade que coloco */
-    /*flex-shrink: 3; /* ocupa um espaço menor em relação aos demais */
+/*     order: 3; */
+    flex-grow: 3; /* isso vai dizer que ele ocupa 3x mais em relação aos outros items e assim, consecutivamente em relação a quantidade que coloco */
+    /*flex-shrink: 3; /* está relacionado com a capacidade de redução do item  e no valor 3 ocupa um espaço menor em relação aos demais -> container com flex-wrap: nowrap; e item com flex-basis: 30px; para visualizar*/
 }
 
 .article-02 {
-    /* order: 1; */
-    /* align-self: auto; */
+     /*order: 1; 
+     align-self: auto; /*ele obedece se o align-content: no container estiver desabilitado. E se o flex-direction do container estiver em colum ele alinha os itens em coluna. O auto faz com que ele obedeça o que foi definido no container */
 }
 
 .article-03 {
-    /* order: 2; */
+/*     order: 2; */
 }
 
 .article-04 {
-    /* order: 4; */
+/*     order: 4; */
 }

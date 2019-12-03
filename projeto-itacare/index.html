@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Paraíso</title>
-
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.js"></script>
+    <!--    ícones de redes sociais    -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -88,9 +87,12 @@
         </ul>
         <p><i class="far fa-copyright"></i> Todos os direitos reservados - Hotel Paraíso 2019</p>
     </footer>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
+    <!--scroll animates-->
+    <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.js"></script>
+    <script type="text/javascript" src="css/function.js"></script><!--animação header-->
     
-<script>
-// SmartMenus init
+       <script>
     window.sr = ScrollReveal ({
     distance: '50px',
     duration: 1000,
@@ -98,12 +100,20 @@
     mobile: true,
     reset: false,
     viewFactor: 0.4,
-});  
-    sr.reveal('.hero h1, .hero h3, .btn',{
-    origin: 'left',
-    //scale: 0.3,
 });
-</script>
+    sr.reveal('.hero h1, .hero h3, .btn',{
+        origin: 'bottom',
+//        scale: 0.3,
+    });
+    sr.reveal('.conheca h3, .conheca p, .conheca .grid li, .newsletter h3, .newsletter p, .newsletter form',{
+        origin: 'left',
+    });
+    sr.reveal('.caracteristicas h3, .caracteristicas p, .caracteristicas .grid li, .caracteristicas .grid i, .caracteristicas h4',{
+        scale: 0.9,
+    });
+    
+    
+    </script>
 </body>
 
 </html>
